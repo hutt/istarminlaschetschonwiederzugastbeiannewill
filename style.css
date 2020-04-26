@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,900&display=swap');
+
+/* background animation */
+html, body {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	cursor: url(cursor.png) 64 64, auto;
+	background-color: #61c404;
+	animation-name: backgroundcolorchange;
+	animation-duration: 50s;
+	animation-iteration-count: infinite;
+}
+
+/* grid container */
+.container {
+	flex: 1;
+	margin: 0 5vw 0 5vw;
+}
+
+/* set font style */
+h1, h2, p, footer, footer a {
+	color: #fff;
+	font-family: 'Raleway', sans-serif;
+	text-decoration: none;
+	font-style: normal;
+	text-align: center;
+}
+
+h1 {
+	font-weight: 400;
+}
+
+h2 {
+	font-weight: 900;
+}
+
+/* heading box */
+.heading {
+	margin-top: 30vh;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-left: 0;
+}
+
+/* heading text */
+.heading h1 {
+	font-size: 1.4vmax;
+	margin-bottom: 2vh;
+}
+
+.heading h2 {
+	font-size: 20vmax;
+	margin-top: 2vh;
+	margin-bottom: 0;
+}
+
+footer {
+	font-size: 1.2vmax;
+	margin-bottom: 1vh;
+}
+
+footer a:hover {
+	text-decoration: underline;
+}
+
+/* Geräte im Portraitmodus */
+@media screen and (orientation:portrait) {
+	.heading {
+		margin-top: 40vh;
+	}
+}
+
+/* Smartphones im Landscape-Modus */
+@media screen and (orientation:landscape) and (max-height: 480px) {
+	.heading {
+		margin-top: 25vh;
+	}
+}
+
+/* background color(s) */
+@keyframes backgroundcolorchange {
+  0%   {
+		background: #61c404; /* grün */
+  }
+  20%  {
+		background: #4aa1ff; /* blau */
+  }
+  40%  {
+		background: #f01fff; /* violett */
+  }
+  60%  {
+		background: #f52749; /* rot */
+  }
+  80%  {
+		background: #ded71d; /* gelb */
+  }
+  100% {
+  		background: #61c404;
+  }
+}
